@@ -1,38 +1,32 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# Portfolio
 
-## Creating a project
+This repository is made to prepare my portfolio i want to try to make something visually appealing here knowing design is not my forte. This is made to dive deeper into svelte components and svelte kit i might try to make a library for myself of some of those components.
+## Deployment
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+there is no deployment yet this is still a work in progress.
+For now just clone this repository and run:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm i
+pnpm run dev
 ```
 
-## Building
 
-To create a production version of your app:
+## Roadmap
 
-```bash
-npm run build
-```
+- Creating the first small building blocks and gathering the assets i need.
 
-You can preview the production build with `npm run preview`.
+- Navbar animation 
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- Prepare the layouts 
+
+- Setup backround images using canvas and animate them through scrolling animation and as a loading animation for some too
+
+
+
+## Tech Stack
+
+**Client:** Svelte, Sveltekit, Scss
+
+
