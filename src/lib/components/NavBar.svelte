@@ -12,6 +12,7 @@ import home from "$lib/assets/home.svg";
             links={["#", "#", "#", "#"]}
             icons={[home, projects, about, contact]}
             altIcons={["home", "projects", "about", "contact"]}
+            isExternal={false}
         />
 	</div>
 </div>

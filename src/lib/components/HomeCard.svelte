@@ -16,10 +16,10 @@
 
 	<div class="home-card__links">
 		<Buttons
-			links={['https://github.com/Pierremarien', 'www.linkedin.com/in/pierre-marien']}
+			links={['https://github.com/Pierremarien', 'https://www.linkedin.com/in/pierre-marien']}
 			icons={[github, linkedin]}
 			altIcons={['github', 'linkedin']}
-			x="_blank"
+			isExternal={true}
 		/>
 	</div>
 </div>

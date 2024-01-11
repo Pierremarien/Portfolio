@@ -2,11 +2,11 @@
 	export let links: string[] = [];
 	export let icons: string[] = [];
 	export let altIcons: string[] = [];
-	export let x: string = '_self' || '_blank';
-</script>
+    export let isExternal:boolean = false;
+    </script>
 
 {#each links as link, i}
-	<a href={link} class="icobtn" target={x}>
+	<a href={link} class="icobtn" target={isExternal ? '_blank' : '_self'}>
 		<div>
 			<img src={icons[i]} alt={altIcons[i]} />
 		</div>
