@@ -21,7 +21,7 @@ import home from "$lib/assets/home.svg";
 
         &__links{
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             width: 100%;
             height: 100%;
