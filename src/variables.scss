@@ -7,3 +7,42 @@ $tertiary: #5d5d81;
 $quaternary: #3b3355;
 $quinary: #000505;
 
+//fonts
+
+$primary-font: 'Fira Sans', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+$tertiary-font: 'Raleway', sans-serif;
+
+$primary-font-weight: 400;
+$secondary-font-weight: 300;
+$tertiary-font-weight: 500;
+
+//font sizes
+
+$primary-font-size: 1.5rem;
+$secondary-font-size: 1.25rem;
+$tertiary-font-size: 1rem;
+
+
+//mixins
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
