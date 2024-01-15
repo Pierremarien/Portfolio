@@ -1,6 +1,13 @@
 <script lang="ts">
-    import { NavBar } from "$lib";
     import { HomeCard } from "$lib";
 </script>
-<NavBar />
-<HomeCard />
+<section id="home">
+    <HomeCard />
+</section>
+
+<style lang="scss">
+#home {
+    width: 100vw;
+    height: 100vh;
+}
+</style>

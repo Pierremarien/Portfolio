@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { Buttons } from '$lib';
+	import { TextScrambler } from '$lib';
 	import github from '$lib/assets/github.svg';
 	import linkedin from '$lib/assets/linkedin.png';
 </script>
 
-<div class="home-card">
-	<div class="wrapper">
+<div class="container">
+	<div class="home-card">
 		<div class="home-card__title">
-			<h1>Hi There, I'm <span class="name">Pierre Marien</span>!</h1>
+			<h1><TextScrambler text="Hi there, I'm"/> <span class="name">Pierre Marien</span>!</h1>
 		</div>
 		<div class="home-card__subtitle">
 			<h2>Frontend Developer</h2>
@@ -24,4 +25,33 @@
 	</div>
 </div>
 
-<style lang="scss"></style>
+<style lang="scss">
+	.container {
+		@include flex-center;
+		justify-content: flex-end;
+		width: 100vw;
+		height: 100vh;
+		gap: 20%;
+	}
+	.home-card {
+		@include flex-column;
+		align-items: flex-end;
+		width: 100%;
+		height: 100%;
+
+		&__title {
+			padding-bottom: 1rem;
+			text-align: right;
+			.name {
+				font-family: $tertiary-font;
+				font-style: normal;
+			}
+		}
+
+		&__links {
+			@include flex-column;
+			padding: 1rem;
+			gap: 1rem;
+		}
+	}
+</style>

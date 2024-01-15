@@ -19,6 +19,7 @@ import home from "$lib/assets/home.svg";
 
 <style lang="scss">
 	.navbar{
+        position: fixed;
 
         &__links{
             display: flex;

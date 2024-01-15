@@ -6,7 +6,7 @@ body {
     font-family: $primary-font;
 
     h1 {
-        font-size: $primary-font-size;
+        font-size: clamp($secondary-font-size, 5vw, $primary-font-size);
         font-weight: $tertiary-font-weight;
         font-style: italic;
     }
