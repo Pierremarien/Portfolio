@@ -2,28 +2,29 @@
 
 body {
 	background-color: $quinary;
-    color: $primary;
-    font-family: $primary-font;
+	color: $primary;
+	font-family: $primary-font;
+	width: 100%;
+	h1 {
+		font-size: clamp($secondary-font-size, 5vw, $primary-font-size);
+		font-weight: $tertiary-font-weight;
+		font-style: italic;
+	}
 
-    h1 {
-        font-size: clamp($secondary-font-size, 5vw, $primary-font-size);
-        font-weight: $tertiary-font-weight;
-        font-style: italic;
-    }
+	h2 {
+		font-size: $secondary-font-size;
+		font-weight: $primary-font-weight;
+	}
 
-    h2 {
-        font-size: $secondary-font-size;
-        font-weight: $primary-font-weight;
-    }
+	h3 {
+		font-size: $tertiary-font-size;
+		font-weight: $secondary-font-weight;
+		color: $quinary;
+	}
 
-    h3 {
-        font-size: $tertiary-font-size;
-        font-weight: $secondary-font-weight;
-    }
-
-    p {
-        font-family: $secondary-font;
-        font-size: $tertiary-font-size;
-        font-weight: $secondary-font-weight;
-    }
+	p {
+		font-family: $secondary-font;
+		font-size: $tertiary-font-size;
+		font-weight: $secondary-font-weight;
+	}
 }
