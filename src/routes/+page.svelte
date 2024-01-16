@@ -49,7 +49,7 @@
         align-items: center;
         h2 {
             justify-self: end;
-            padding-right: 4rem;
+            padding-right: 3rem;
         }
     }
     #contact {
