@@ -6,3 +6,4 @@ export { default as TextScrambler } from './components/TextScrambler.svelte';
 export { default as ProjectCard } from './components/ProjectCard.svelte';
 export { default as Scroller } from './components/Scroller.svelte';
 export { default as AboutCard } from './components/AboutCard.svelte';
+export { default as ContactCard } from './components/ContactCard.svelte';

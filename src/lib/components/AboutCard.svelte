@@ -84,7 +84,8 @@
 					width: 42px;
 					height: 42px;
 					object-fit: cover;
-					filter: invert(100%);
+					filter: invert(92%);
+                    opacity: 0.88;
 				}
 			}
 		}

@@ -2,6 +2,7 @@
 	import { HomeCard } from '$lib';
 	import { Scroller } from '$lib';
     import { AboutCard } from '$lib';
+    import { ContactCard } from '$lib';
 </script>
 
 <section id="home">
@@ -17,6 +18,7 @@
 </section>
 <section id="contact">
     <h2>Contact</h2>
+    <ContactCard />
 </section>
 
 <style lang="scss">
@@ -35,7 +37,7 @@
 
 		h2 {
 			justify-self: start;
-			padding-left: 2rem;
+			padding-left: 3rem;
 			padding-top: 4rem;
 		}
 	}
@@ -56,6 +58,16 @@
         width: 100%;
         height: 50vh;
         box-sizing: border-box;
+        display: grid;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
+
+        h2 {
+            justify-self: start;
+            padding-left: 3rem;
+            padding-top: 4rem;
+        }
     }
     @media (max-width: 768px) {
         #About {
