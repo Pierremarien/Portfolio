@@ -9,28 +9,25 @@
 			project: 'Cogip',
 			description:
 				"This is our latest group project using React and tailwind. It's a project using an api made by our backend team. We worked in a team of 4 to realise this project.",
-			link: 'https://cogip.netlify.app/',
 			img: cogip
 		},
 		{
 			project: 'Dark Kitchen',
 			description:
 				"This is one of our earliest projects using vanilla js and sass. It's a web application for a fictional restaurant to manage their menu and a basket to manage takeouts.",
-			link: 'https://dark-kitchen.netlify.app/',
 			img: darkKitchen
 		},
 		{
 			project: 'AZ-Store',
 			description:
 				"This project was the last project before learning React. It was made using php and scss. It's a webshop for a fictional shoe store containing a basket a fictional login...",
-			link: 'https://az-store.netlify.app/',
 			img: azStore
 		}
 	];
 </script>
 
 <div class="scroller snap">
-	{#each projects as project (project.link)}
+	{#each projects as project (project.project)}
 		<ProjectCard {project} />
 	{/each}
 </div>

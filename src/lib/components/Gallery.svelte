@@ -1,42 +1,13 @@
 <script lang="ts">
-	import cogip from '$lib/assets/cogip.png';
-	import cogip2 from '$lib/assets/cogip2.png';
-	import cogip3 from '$lib/assets/cogip3.png';
-	import cogip4 from '$lib/assets/cogip4.png';
-	import cogip6 from '$lib/assets/cogip6.png';
 	import { writable, type Writable } from 'svelte/store';
+    import type { Image } from '$lib/types/types';
 
-	export let imgs: {
-		img: string;
-		alt: string;
-	}[] = [
-		{
-			img: cogip,
-			alt: 'Cogip'
-		},
-		{
-			img: cogip2,
-			alt: 'Cogip'
-		},
-		{
-			img: cogip3,
-			alt: 'Cogip'
-		},
-		{
-			img: cogip4,
-			alt: 'Cogip'
-		},
-		{
-			img: cogip6,
-			alt: 'Cogip'
-		}
-	];
-
-let currentImage: Writable<typeof Image | null> = writable(null);
+	export let images : Image[];
+	export let currentImage: Writable<typeof Image | null> = writable(null);
 </script>
 
 <div class="gallery">
-	{#each imgs as img, i (img.img)}
+	{#each images as img, i (img.img)}
 		<div class="gallery__img" role="dialog" on:click={() => currentImage.set(img)}>
 			<img src={img.img} alt={img.alt} />
 		</div>
@@ -97,7 +68,7 @@ let currentImage: Writable<typeof Image | null> = writable(null);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-        z-index: 1000;
+		z-index: 1000;
 
 		img {
 			max-width: 90%;

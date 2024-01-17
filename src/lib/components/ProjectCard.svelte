@@ -2,7 +2,6 @@
 	export let project = {
 		project: '',
 		description: '',
-		link: '',
 		img: ''
 	};
 
@@ -20,7 +19,7 @@
 		<p>
 			{project.description}
 		</p>
-		<a class="project-card_description__link" href={project.link}>Read more ...</a>
+		<a class="project-card_description__link" href={project.project}>Read more ...</a>
 	</div>
 </div>
 
