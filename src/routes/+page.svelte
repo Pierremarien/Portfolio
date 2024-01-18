@@ -70,7 +70,7 @@
         }
     }
     @media (max-width: 768px) {
-        #About {
+        #about {
             height: 100vh;
         }
     }
