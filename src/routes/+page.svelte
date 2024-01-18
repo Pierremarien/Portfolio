@@ -12,7 +12,7 @@
 	<h2>Projects</h2>
 	<Scroller />
 </section>
-<section id="About">
+<section id="about">
     <h2>About Me</h2>
     <AboutCard />
 </section>
@@ -41,7 +41,7 @@
 			padding-top: 4rem;
 		}
 	}
-    #About {
+    #about {
         width: 100%;
         height: 50vh;
         box-sizing: border-box;

@@ -29,9 +29,11 @@
 <div class="contact-card">
 	{#each links as link (link.link)}
 		<div class={link.alt === 'Linkedin' ? 'contact-card__link reversed' : 'contact-card__link'}>
-			<div class="contact-card__link__img">
-				<img src={link.icon} alt={link.alt} />
-			</div>
+			<a href={link.link}>
+                <div class="contact-card__link__img">
+                    <img src={link.icon} alt={link.alt}/>
+                </div>
+			</a>
 			<a href={link.link}>{link.alt}</a>
 		</div>
 	{/each}

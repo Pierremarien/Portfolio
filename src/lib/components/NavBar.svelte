@@ -9,7 +9,7 @@
 <div class="navbar">
 	<div class="navbar__links">
 		<Buttons
-			links={['#', '#', '#', '#']}
+			links={['/#home', '/#projects', '/#about', '/#contact']}
 			icons={[home, projects, about, contact]}
 			altIcons={['home', 'projects', 'about', 'contact']}
 			isExternal={false}

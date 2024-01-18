@@ -67,12 +67,15 @@
 			}
 		}
 		&.clicked {
+			img {
+				display: none;
+			}
 			.project-card__description {
 				opacity: 1;
 				visibility: visible;
 				top: 0;
 				left: 0;
-				background-color: $quinary;
+				background: none;
 				width: inherit;
 				height: inherit;
 				border: 1px solid $primary;

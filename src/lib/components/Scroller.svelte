@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ProjectCard } from '$lib';
 	import cogip from '$lib/assets/cogip-preview.jpg';
-	import darkKitchen from '$lib/assets/dark-kitchen-preview.jpg';
+	import pokedex from '$lib/assets/pokedex-preview.jpg';
 	import azStore from '$lib/assets/az-store-preview.jpg';
 
 	let projects = [
@@ -12,10 +12,10 @@
 			img: cogip
 		},
 		{
-			project: 'Dark Kitchen',
+			project: 'Pokedex',
 			description:
-				"This is one of our earliest projects using vanilla js and sass. It's a web application for a fictional restaurant to manage their menu and a basket to manage takeouts.",
-			img: darkKitchen
+				"This projext was made using php mysql and scss. It's a pokedex where you can see all the pokemons and their stats. You can also add pokemons to your favorites and see them in a separate page.",
+			img: pokedex
 		},
 		{
 			project: 'AZ-Store',
