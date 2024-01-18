@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Buttons } from '$lib';
-	import { onMount, onDestroy } from 'svelte';
 	import { BurgerPill } from '$lib';
 	import projects from '$lib/assets/projects.svg';
 	import about from '$lib/assets/about.png';
