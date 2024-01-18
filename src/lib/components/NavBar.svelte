@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Buttons } from '$lib';
-	import { BurgerPill } from '$lib';
 	import projects from '$lib/assets/projects.svg';
 	import about from '$lib/assets/about.png';
 	import contact from '$lib/assets/contact.svg';
@@ -9,7 +8,6 @@
 
 <div class="navbar">
 	<div class="navbar__links">
-		<BurgerPill />
 		<Buttons
 			links={['/#home', '/#projects', '/#about', '/#contact']}
 			icons={[home, projects, about, contact]}
