@@ -8,4 +8,4 @@ export { default as Scroller } from './components/Scroller.svelte';
 export { default as AboutCard } from './components/AboutCard.svelte';
 export { default as ContactCard } from './components/ContactCard.svelte';
 export { default as Gallery } from './components/Gallery.svelte';
-
+export { default as BurgerPill } from './components/BurgerPill.svelte';
