@@ -34,23 +34,23 @@
         "code": "https://github.com/Pierremarien/AZ-Store",
         "imgs": [
             {
-                "img": "/assets/azstore.png",
+                "img": "/assets/az-store.png",
                 "alt": "azstore"
             },
             {
-                "img": "/assets/azstore2.png",
+                "img": "/assets/az-store2.png",
                 "alt": "azstore"
             },
             {
-                "img": "/assets/azstore3.png",
+                "img": "/assets/az-store3.png",
                 "alt": "azstore"
             },
             {
-                "img": "/assets/azstore4.png",
+                "img": "/assets/az-store4.png",
                 "alt": "azstore"
             },
             {
-                "img": "/assets/azstore5.png",
+                "img": "/assets/az-store5.png",
                 "alt": "azstore"
             }
         ]
@@ -75,10 +75,6 @@
             },
             {
                 "img": "/assets/pokedex4.png",
-                "alt": "pokedex"
-            },
-            {
-                "img": "/assets/pokedex5.png",
                 "alt": "pokedex"
             }
         ]

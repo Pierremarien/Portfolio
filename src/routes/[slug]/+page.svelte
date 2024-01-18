@@ -2,39 +2,34 @@
 	import { TextScrambler } from '$lib';
 	import { Gallery } from '$lib';
 	import type { Project } from '$lib/types/types';
-    import projects from '$lib/data/projects.json';
-
-    export let slug: string;
-    let project: Project = projects.find(p => p.slug === slug);
-    let isLoading: boolean = project ? false : true;
+	export let data: Project;
+	let isLoading: boolean = !data;
 </script>
 
 <section class="project">
 	{#if isLoading}
 		<p>Loading...</p>
-	{:else if project}
-		<section class="project">
-			<h2><TextScrambler text={project.title} /></h2>
-			<div class="container">
-				<Gallery images={project.imgs} />
-			</div>
-			<div class="content">
-				<p>{project.description}</p>
-				{#if project.website}
-					<p>
-						You can find the website{' '}
-						<a href={project.website} target="_blank" rel="noopener noreferrer"> here </a>
-					</p>
-				{:else}
-					<p>There is no deployment for this project.</p>
-				{/if}
+	{:else if data}
+		<h2><TextScrambler text={data.title} /></h2>
+		<div class="container">
+			<Gallery images={data.imgs} />
+		</div>
+		<div class="content">
+			<p>{data.description}</p>
+			{#if data.website}
 				<p>
-					You can find the code{' '}
-					<a href={project.code} target="_blank" rel="noopener noreferrer"> here </a>
-					.
+					You can find the website{' '}
+					<a href={data.website} target="_blank" rel="noopener noreferrer"> here </a>
 				</p>
-			</div>
-		</section>
+			{:else}
+				<p>There is no deployment for this project.</p>
+			{/if}
+			<p>
+				You can find the code{' '}
+				<a href={data.code} target="_blank" rel="noopener noreferrer"> here </a>
+				.
+			</p>
+		</div>
 	{:else}
 		<p>Project not found</p>
 	{/if}
