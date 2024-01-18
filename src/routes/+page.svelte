@@ -4,8 +4,8 @@
     import { AboutCard } from '$lib';
     import { ContactCard } from '$lib';
 </script>
-
-<section id="home">
+<div class="container">
+    <section id="home">
 	<HomeCard />
 </section>
 <section id="projects">
@@ -20,6 +20,8 @@
     <h2>Contact</h2>
     <ContactCard />
 </section>
+</div>
+
 
 <style lang="scss">
 	#home,
@@ -68,6 +70,18 @@
             padding-left: 3rem;
             padding-top: 4rem;
         }
+    }
+  
+    .container {
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        overscroll-behavior-y: contain;
+        scroll-behavior: smooth;
+    }
+    section {
+        scroll-snap-align: start;
     }
     @media (max-width: 768px) {
         #about {
