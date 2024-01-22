@@ -13,8 +13,6 @@
 		container.addEventListener('scroll', () => {
 			
       const scrollPositionValue = container.scrollTop;
-
-      // Set scroll position to your store
       scrollPosition.set(scrollPositionValue);
 
         });
