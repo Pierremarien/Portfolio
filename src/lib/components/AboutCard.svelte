@@ -95,6 +95,10 @@
         .about-card {
             @include flex-column;
             gap: 3rem;
+
+			&__description {
+				width: 80%;
         }
     }
+}
 </style>
