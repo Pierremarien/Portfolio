@@ -8,8 +8,6 @@
 	let triangleAnimationProgress: number = 0;
 	let scrollAnimationState: number = 0;
 
-	
-
 	const raf =
 		typeof window !== 'undefined'
 			? window.requestAnimationFrame
@@ -100,13 +98,14 @@
 	};
 
 	const drawVerticalLines = (progress: number) => {
-        drawVerticalLine(progress, 0.125, false);
+		drawVerticalLine(progress, 0.125, false);
 		drawVerticalLine(progress, 0.25, true);
-        drawVerticalLine(progress, 0.375, false);
+		drawVerticalLine(progress, 0.375, false);
 		drawVerticalLine(progress, 0.5, true);
-        drawVerticalLine(progress, 0.625, false);
-		drawVerticalLine(progress, 0.75, true);7
-        drawVerticalLine(progress, 0.875, false);
+		drawVerticalLine(progress, 0.625, false);
+		drawVerticalLine(progress, 0.75, true);
+		7;
+		drawVerticalLine(progress, 0.875, false);
 	};
 
 	let maxScrollProgress = 0;
@@ -120,7 +119,7 @@
 			drawDiagonals(triangleAnimationProgress);
 			raf(draw);
 		} else {
-			drawDiagonals(1); 
+			drawDiagonals(1);
 
 			const scrollProgress = Math.min(1, scrollAnimationState / canvas.height);
 			if (
@@ -135,20 +134,25 @@
 				drawHorizontalLines(maxScrollProgress);
 			}
 
-            const verticalScrollProgress = Math.max(0, Math.min(1, (scrollAnimationState - canvas.height) / canvas.height));
-            if (verticalScrollProgress > 0) {
-                drawVerticalLines(verticalScrollProgress);
-            }
+			const verticalScrollProgress = Math.max(
+				0,
+				Math.min(1, (scrollAnimationState - canvas.height) / canvas.height)
+			);
+			if (verticalScrollProgress > 0) {
+				drawVerticalLines(verticalScrollProgress);
+			}
 
 			previousScrollAnimationState = scrollAnimationState;
 			raf(draw);
 		}
 	};
 
-    const handleResize = () => {
+	const handleResize = () => {
 		if (typeof window !== 'undefined') {
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
+			context!.strokeStyle = '#5d5d81';
+			context!.globalAlpha = 0.6;
 		}
 	};
 
@@ -199,6 +203,6 @@
 		top: 0;
 		left: 0;
 		pointer-events: none;
-        z-index: -1;
+		z-index: -1;
 	}
 </style>

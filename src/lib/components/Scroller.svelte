@@ -41,13 +41,31 @@
 		overflow-x: auto;
 		overflow-y: hidden;
 		overscroll-behavior-inline: contain;
+		padding-bottom: 0.3rem;
+
 		&::-webkit-scrollbar {
-			display: none;
+			width: 10px;
+			
+			&-track {
+				opacity: 0;
+			}
+
+			&-thumb {
+				background-color: $primary;
+				border-radius: 10px;
+				opacity: 0;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
 	}
+
 	.snap {
 		scroll-snap-type: inline mandatory;
 	}
+	
 	@media (max-width: 1020px) {
 		.scroller {
 			width: 95%;
