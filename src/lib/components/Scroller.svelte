@@ -14,7 +14,7 @@
 		{
 			project: 'Pokedex',
 			description:
-				"This projext was made using php mysql and scss. It's a pokedex where you can see all the pokemons and their stats. You can also add pokemons to your favorites and see them in a separate page.",
+				"This project was made using php mysql and scss. It's a pokedex where you can see all the pokemons and their stats. You can also add pokemons to your favorites and see them in a separate page.",
 			img: pokedex
 		},
 		{

@@ -32,7 +32,7 @@
 		position: fixed;
 		z-index: 100;
 		@include flex-row;
-		padding: 2rem;
+		padding: 1rem;
 		gap: 3rem;
 
 		&__links {
