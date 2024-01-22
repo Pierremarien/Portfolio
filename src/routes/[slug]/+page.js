@@ -83,9 +83,7 @@ const projects = [
 
 export async function load({ params }) {
     const { slug } = params;
-    console.log(slug);
     const project = projects.find(p => p.title.toLowerCase() === slug.toLowerCase());
-    console.log(project);
   
     if (project) {
       return project;
