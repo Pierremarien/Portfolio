@@ -164,7 +164,7 @@
 
 		context = canvas.getContext('2d');
 		context!.strokeStyle = '#5d5d81';
-		context!.globalAlpha = 0.3;
+		context!.globalAlpha = 0.6;
 
 		animationFrameId = raf(draw);
 
