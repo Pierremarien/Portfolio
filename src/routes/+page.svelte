@@ -1,12 +1,28 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { scrollPosition } from '$lib/stores/scrollStore';
 	import { BackgroundCanva, HomeCard } from '$lib';
 	import { Scroller } from '$lib';
 	import { AboutCard } from '$lib';
 	import { ContactCard } from '$lib';
+
+    let container: HTMLDivElement;
+  let fullWindowHeights = 0;
+
+	onMount(() => {
+		container.addEventListener('scroll', () => {
+			
+      const scrollPositionValue = container.scrollTop;
+
+      // Set scroll position to your store
+      scrollPosition.set(scrollPositionValue);
+
+        });
+	});
 </script>
 
-<div class="container">
-	<BackgroundCanva />
+<BackgroundCanva />
+<div class="container" bind:this={container}>
 	<section id="home">
 		<HomeCard />
 	</section>
@@ -77,13 +93,15 @@
 		width: 100%;
 		height: 100vh;
 		overflow-y: scroll;
-		scroll-snap-type: y mandatory;
 		overscroll-behavior-y: contain;
 		scroll-behavior: smooth;
+        scroll-snap-type: y proximity;
 	}
-	section {
-		scroll-snap-align: start;
-	}
+
+    section {
+        scroll-snap-align: start;
+    }
+	
 	@media (max-width: 768px) {
 		#about {
 			height: 100vh;
