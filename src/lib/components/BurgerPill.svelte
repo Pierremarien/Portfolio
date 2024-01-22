@@ -1,10 +1,13 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
 
 	let canvas: HTMLCanvasElement;
 	let context: CanvasRenderingContext2D | null;
 	let animationFrameId: number;
 	let draw: () => void;
+	let isPaused: boolean = false;
 
 	onMount(() => {
 		context = canvas.getContext('2d');
@@ -13,6 +16,9 @@
 			throw new Error('Failed to get 2D context');
 		} else {
 			draw = function () {
+				if (isPaused) {
+					return;
+				}
 				context!.clearRect(0, 0, canvas.width, canvas.height);
 
 				context!.lineWidth = 4;
@@ -48,23 +54,42 @@
 			cancelAnimationFrame(animationFrameId);
 		}
 	});
+
+	const handleClick = () => { 
+		dispatch('click');
+        isPaused = true;
+        setTimeout(() => {
+            isPaused = false;
+            draw();
+        }, 1000);
+    };
 </script>
 
-<div class="container">
+<button class="container" on:click={handleClick}>
 	<canvas bind:this={canvas}></canvas>
-</div>
+</button>
 
 <style lang="scss">
 	.container {
+		border: none;
+		cursor: pointer;
 		width: 40px;
 		height: 40px;
 		border-radius: 100%;
 		background-color: $primary;
 		@include flex-center;
-	}
+		transition: scale 0.2s ease-in-out;
+		z-index: 20;
 
-	canvas {
+		canvas {
 		width: 85%;
 		height: 85%;
 	}
+
+	&:hover {
+		scale: 1.1;
+	}
+	}
+
+	
 </style>

@@ -5,11 +5,19 @@
 	import about from '$lib/assets/about.png';
 	import contact from '$lib/assets/contact.svg';
 	import home from '$lib/assets/home.svg';
+
+	let isMenuOpen = false;
 </script>
 
 <div class="navbar">
-	<div class="navbar__links">
-		<BurgerPill />
+	<BurgerPill
+		on:click={() => {
+			isMenuOpen = !isMenuOpen;
+			console.log('clicked');
+		}}
+	/>
+
+	<div class={`navbar__links ${isMenuOpen ? 'open' : ''}`}>
 		<Buttons
 			links={['/#home', '/#projects', '/#about', '/#contact']}
 			icons={[home, projects, about, contact]}
@@ -23,15 +31,32 @@
 	.navbar {
 		position: fixed;
 		z-index: 100;
+		@include flex-row;
+		padding: 2rem;
+		gap: 3rem;
 
 		&__links {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			width: 100%;
-			height: 100%;
-			padding: 1rem;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 1s ease-in-out;
+			@include flex-row;
 			gap: 1rem;
+			z-index: 10;
+			&.open {
+				visibility: visible;
+				animation: slideIn 0.6s forwards;
+			}
+		}
+	}
+
+	@keyframes slideIn {
+		0% {
+			opacity: 0;
+			transform: translateX(-100%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
 		}
 	}
 </style>
