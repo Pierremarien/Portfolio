@@ -61,7 +61,7 @@
         setTimeout(() => {
             isPaused = false;
             draw();
-        }, 1000);
+        }, 300);
     };
 </script>
 

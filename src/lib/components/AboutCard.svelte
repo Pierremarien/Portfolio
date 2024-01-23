@@ -7,7 +7,7 @@
 	import sveltelogo from '$lib/assets/svelte-16-svgrepo-com.svg';
 	export let about = {
 		about:
-			"I am a Frontend Developer with a passion for creating beautiful and functional websites. I still have a long path ahead of me to master development and design but i'm confident in my adaptability and my capacity to learn and understand things pretty fast. I am currently learning React and having some fun with Svelte but I'm pretty open to learn new things. I love gaming, coding and loads of artsy things japanese art, loads of different music styles, ...",
+			"I am a Frontend Developer with a passion for creating beautiful and functional websites. I still have a long path ahead of me to master development and design but I'm confident in my adaptability and my capacity to learn and understand things pretty fast. I am currently learning React and having some fun with Svelte but I'm pretty open to learn new things. I love gaming, coding and loads of artsy things japanese art, loads of different music styles, ...",
 		quote: 'You know nothing, Jon Snow.',
 		imgs: [
 			{
