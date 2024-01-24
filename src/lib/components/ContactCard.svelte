@@ -18,7 +18,7 @@
 			alt: 'Linkedin'
 		},
 		{
-			link: 'mailto:pierremarien29@gmail.com',
+			link: 'mailto:contact@pierremarien.be',
 			icon: contact,
 			alt: 'Contact me'
 		}
