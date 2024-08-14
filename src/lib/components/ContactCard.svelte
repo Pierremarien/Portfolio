@@ -8,7 +8,7 @@
 		},
 		{
 			link: string;
-			icon: string;
+			icon: string | undefined;
 			alt: string;
 		}
 	] = [
@@ -19,7 +19,7 @@
 		},
 		{
 			link: 'mailto:contact@pierremarien.be',
-			icon: contact,
+			icon: undefined,
 			alt: 'Contact me'
 		}
 	];
@@ -55,6 +55,8 @@
 				font-family: $tertiary-font;
 				font-size: 2rem;
 				cursor: pointer;
+				text-align: left;
+
 
 				&:hover,
 				&:focus,
@@ -64,18 +66,6 @@
 
 				&:visited {
 					color: $quaternary;
-				}
-			}
-
-			&__img {
-				@include flex-center;
-				width: 60px;
-				height: 60px;
-
-				img {
-					width: 100%;
-					height: 100%;
-					filter: invert(89%);
 				}
 			}
 		}

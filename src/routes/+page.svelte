@@ -54,7 +54,7 @@
 
 		h2 {
 			justify-self: start;
-			padding-left: 3rem;
+			padding-left: 5rem;
 			padding-top: 4rem;
 		}
 	}
@@ -67,8 +67,8 @@
 		justify-items: center;
 		align-items: center;
 		h2 {
-			justify-self: end;
-			padding-right: 3rem;
+			justify-self: start;
+			padding-left: 5rem;
 		}
 	}
 	#contact {
@@ -82,7 +82,7 @@
 
 		h2 {
 			justify-self: start;
-			padding-left: 3rem;
+			padding-left: 5rem;
 			padding-top: 4rem;
 		}
 	}
@@ -93,12 +93,9 @@
 		overflow-y: scroll;
 		overscroll-behavior-y: contain;
 		scroll-behavior: smooth;
-        scroll-snap-type: y proximity;
 	}
 
-    section {
-        scroll-snap-align: start;
-    }
+    
 	
 	@media (max-width: 768px) {
 		#about {
