@@ -6,7 +6,7 @@
 	import contact from '$lib/assets/contact.svg';
 	import home from '$lib/assets/home.svg';
 
-	let isMenuOpen = false;
+	let isMenuOpen = true;
 </script>
 
 <div class="navbar">
